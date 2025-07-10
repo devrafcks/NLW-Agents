@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLW Agents</title>
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="icon" href="./src/assets/logo.png" type="image/png">
+
+</head>
+<body>
+    <header>
+        <img src="./src/assets/logo.png" alt="logo da NLW" />
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <h2 class="title">Assistente de Meta</h2>
+                <p>Pergunte sobre estratégias, build e dicas para seus jogos!</p>
+
+                <form id="form">
+                    <input id="apiKey" type="password" placeholder="Informe a API KEY do Gemini" required>
+
+                    <select id="gameSelect">
+                        <option value="">Selecione um jogo</option>
+                        <option value="valorant">Valorant</option>
+                        <option value="cs">CS:GO</option>
+                        <option value="fortnite">Fortnite</option>
+                        <option value="elden-ring">Elden Ring</option>
+                        <option value="lies-of-p">Lies of P</option>
+                        <option value="sekiro">Sekiro: Shadows Die Twice</option>
+                        <option value="celeste">Celeste</option>
+                        <option value="minecraft">Minecraft</option>
+                        <option value="hollow-knight">Hollow Knight</option>
+                        <option value="undertale">Undertale</option>
+                    </select>
+
+                    <input id="questionInput" type="text" placeholder="Ex: Como farmar runas rápido no Elden Ring?" required>
+                    <button id="askButton">Perguntar</button>
+                </form>
+
+                <div id="aiResponse" class="hidden">
+                    <div class="response-content">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <script src="./src/scripts/main.js"></script>
+</body>
+</html>
